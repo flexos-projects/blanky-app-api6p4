@@ -1,0 +1,23 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/landing-v1.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/dashboard-v1.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/shared/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000"
+        }
+      ]
+    }
+  ]
+}
